@@ -43,7 +43,6 @@ int main(){
     int values[NUMBER_OF_ITEMS], weights[NUMBER_OF_ITEMS];
     int selected_bool[NUMBER_OF_ITEMS] = {0};
     //Input values and weights
-    printf("Enter the values and weights of %d items (weight should not exceed %d kg):\n", NUMBER_OF_ITEMS, MAX_WEIGHT);
     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
         printf("%c\n", items[i]);
         do {
