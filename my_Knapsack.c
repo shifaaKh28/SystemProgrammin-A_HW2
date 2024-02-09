@@ -38,55 +38,56 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
     }
     return arr[NUMBER_OF_ITEMS][MAX_WEIGHT]; // Return the maximum total value
 }
-// int main() {
-//     char items[NUMBER_OF_ITEMS] = {'a', 'b', 'c', 'd', 'e'};
-//     int values[NUMBER_OF_ITEMS], weights[NUMBER_OF_ITEMS];
-//     int selected_bool[NUMBER_OF_ITEMS] = {0};
-
-//     // Input values and weights
-//     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
-//         char item;
-//         scanf(" %c %d %d", &item, &values[i], &weights[i]);
-//     }
-
-//     // Calculate maximum total value and select items by calling knapsack method
-//     int max = knapSack(weights, values, selected_bool);
-
-//     // Print results
-//     printf("Maximum profit: %d\n", max);
-//     printf("Selected items: ");
-//     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
-//         if (selected_bool[i])
-//             printf("%c", items[i]);
-//     }
-//     return 0;
-// }
-int main(){
-    
-    //Input from user:
-    //Items names:
-    char items[NUMBER_OF_ITEMS][MAX_WEIGHT+1];
-    int values[NUMBER_OF_ITEMS];
-    int weights[NUMBER_OF_ITEMS];
-    for(int i=0; i<NUMBER_OF_ITEMS; i++){
-        scanf(" %s", items[i]);  //Getting name 
-        scanf(" %d", &values[i]);  //Getting value
-        scanf(" %d", &weights[i]);  //Getting weights
-    }
-
-    //Activate function:
+int main() {
+    char items[NUMBER_OF_ITEMS] = {'a', 'b', 'c', 'd', 'e'};
+    int values[NUMBER_OF_ITEMS], weights[NUMBER_OF_ITEMS];
     int selected_bool[NUMBER_OF_ITEMS] = {0};
-    int max_values_sum = knapSack(weights, values, selected_bool);
 
-    //Printing:
-    printf("Maximum profit: %d\n", max_values_sum);
-
-    printf("Selected items:");
-    for(int i=0; i<NUMBER_OF_ITEMS; i++){
-        if(selected_bool[i] == 1){
-            printf(" %s", items[i]);
-        }
+    // Input values and weights
+    for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
+        char item;
+        scanf(" %c %d %d", &item, &values[i], &weights[i]);
     }
 
+    // Calculate maximum total value and select items by calling knapsack method
+    int max = knapSack(weights, values, selected_bool);
+
+    // Print results
+    printf("Maximum profit: %d\n", max);
+    printf("Selected items:");
+    for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
+        if (selected_bool[i])
+            printf(" %c", items[i]);
+    }
     return 0;
 }
+
+// int main(){
+    
+//     //Input from user:
+//     //Items names:
+//     char items[NUMBER_OF_ITEMS][MAX_WEIGHT+1];
+//     int values[NUMBER_OF_ITEMS];
+//     int weights[NUMBER_OF_ITEMS];
+//     for(int i=0; i<NUMBER_OF_ITEMS; i++){
+//         scanf(" %s", items[i]);  //Getting name 
+//         scanf(" %d", &values[i]);  //Getting value
+//         scanf(" %d", &weights[i]);  //Getting weights
+//     }
+
+//     //Activate function:
+//     int selected_bool[NUMBER_OF_ITEMS] = {0};
+//     int max_values_sum = knapSack(weights, values, selected_bool);
+
+//     //Printing:
+//     printf("Maximum profit: %d\n", max_values_sum);
+
+//     printf("Selected items:");
+//     for(int i=0; i<NUMBER_OF_ITEMS; i++){
+//         if(selected_bool[i] == 1){
+//             printf(" %s", items[i]);
+//         }
+//     }
+
+//     return 0;
+// }
