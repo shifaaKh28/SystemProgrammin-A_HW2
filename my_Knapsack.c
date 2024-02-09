@@ -38,22 +38,23 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
     }
     return arr[NUMBER_OF_ITEMS][MAX_WEIGHT]; // Return the maximum total value
 }
-int main(){
-    char items[NUMBER_OF_ITEMS]={'a','b','c','d','e'};
+int main() {
+    char items[NUMBER_OF_ITEMS] = {'a', 'b', 'c', 'd', 'e'};
     int values[NUMBER_OF_ITEMS], weights[NUMBER_OF_ITEMS];
     int selected_bool[NUMBER_OF_ITEMS] = {0};
-    //Input values and weights
+
+    // Input values and weights
     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
-        printf("%c\n", items[i]);
-        do {
-            scanf("%d", &values[i]);
-            scanf("%d", &weights[i]);
-            if (weights[i] > MAX_WEIGHT)
-                printf("Weight exceeds the maximum allowed weight");
-        }while (weights[i] > MAX_WEIGHT);
+        char item;
+        scanf(" %c %d %d", &item, &values[i], &weights[i]);
+        if (weights[i] > MAX_WEIGHT) {
+            printf("Weight exceeds the maximum allowed weight.\n");
+            return 1; // Exit program with error code
+        }
     }
+
     // Calculate maximum total value and select items by calling knapsack method
-    int max= knapSack(weights, values, selected_bool);
+    int max = knapSack(weights, values, selected_bool);
 
     // Print results
     printf("Maximum profit: %d\n", max);
