@@ -47,7 +47,6 @@ int main() {
     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
         char item;
         scanf(" %c %d %d", &item, &values[i], &weights[i]);
-        }
     }
 
     // Calculate maximum total value and select items by calling knapsack method
