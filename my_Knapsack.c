@@ -61,33 +61,3 @@ int main() {
     }
     return 0;
 }
-
-// int main(){
-    
-//     //Input from user:
-//     //Items names:
-//     char items[NUMBER_OF_ITEMS][MAX_WEIGHT+1];
-//     int values[NUMBER_OF_ITEMS];
-//     int weights[NUMBER_OF_ITEMS];
-//     for(int i=0; i<NUMBER_OF_ITEMS; i++){
-//         scanf(" %s", items[i]);  //Getting name 
-//         scanf(" %d", &values[i]);  //Getting value
-//         scanf(" %d", &weights[i]);  //Getting weights
-//     }
-
-//     //Activate function:
-//     int selected_bool[NUMBER_OF_ITEMS] = {0};
-//     int max_values_sum = knapSack(weights, values, selected_bool);
-
-//     //Printing:
-//     printf("Maximum profit: %d\n", max_values_sum);
-
-//     printf("Selected items:");
-//     for(int i=0; i<NUMBER_OF_ITEMS; i++){
-//         if(selected_bool[i] == 1){
-//             printf(" %s", items[i]);
-//         }
-//     }
-
-//     return 0;
-// }
