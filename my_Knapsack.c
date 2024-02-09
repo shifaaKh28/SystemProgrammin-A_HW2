@@ -59,6 +59,5 @@ int main() {
         if (selected_bool[i])
             printf("%c ", items[i]);
     }
-    printf("\n");
     return 0;
 }
