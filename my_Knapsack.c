@@ -47,9 +47,6 @@ int main() {
     for (int i = 0; i < NUMBER_OF_ITEMS; i++) {
         char item;
         scanf(" %c %d %d", &item, &values[i], &weights[i]);
-        if (weights[i] > MAX_WEIGHT) {
-            printf("Weight exceeds the maximum allowed weight.\n");
-            return 1; // Exit program with error code
         }
     }
 
